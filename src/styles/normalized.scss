@@ -1,0 +1,36 @@
+//@import "../constants/public.scss";
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    -webkit-tap-highlight-color:transparent;
+}
+
+html {
+    font-family: PingFangSC-Regular,HelveticaNeue,Helvetica,Arial,sans-serif;
+    font-size: 12px;
+}
+
+body,body p{
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+ul, li {
+    list-style: none;
+}
+
+input{
+    outline: none;
+}
