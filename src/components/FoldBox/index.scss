@@ -1,0 +1,37 @@
+@import "../../styles/public.scss";
+
+.fold-box{
+  background-color: $theme-color-white;
+  width: 100%;
+  margin-top: 0.2rem;
+  position: relative;
+
+  .fold-title{
+    width: 100%;
+    height: 2rem;
+    padding: 0 0.5rem;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    .fold-name{
+      @include font-dpr(10px);
+    }
+    img{
+      width: px2rem(32px);
+      height: px2rem(32px);
+    }
+  }
+
+  .fold-container{
+    height:0;
+    transition: height 0.6s;
+    overflow: hidden;
+    .fold-item{
+
+    }
+  }
+
+
+
+}

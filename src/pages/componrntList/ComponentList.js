@@ -5,8 +5,22 @@ import React, { Component } from "react"
 
 import { picPathHead } from "../../conf/conf"
 
+import FoldBox from "../../components/FoldBox/FoldBox"
+
+import "./index.scss"
+
 class ComponentList extends Component{
+    constructor(){
+        super();
+        this.state={
+            foldList:[
+                {title:"容器组件",img:"/foldBox/container.png",itemList:[{name:"swiper",path:""}]},
+                {title:"基础内容",img:"/foldBox/container.png",itemList:[{name:"swiper",path:""}]},
+            ]
+        };
+    }
     render(){
+
         return(
             <div className="component-page">
                 <div className = "component-title">
@@ -16,6 +30,13 @@ class ComponentList extends Component{
                     </p>
                 </div>
                 <div className = "component-container">
+                    {
+                        this.state.foldList.map((item,index)=>{
+                            return(
+                                <FoldBox info={item} key={`foldBox${index}`}/>
+                            )
+                        })
+                    }
                 </div>
             </div>
         )
