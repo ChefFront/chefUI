@@ -29,27 +29,25 @@ class FoldItem extends React.Component{
  class FoldBox extends React.Component{
     constructor(){
         super();
-        this.state={
-            flag:false
-        };
+
         this.changeState = this.changeState.bind(this);
     }
     changeState(){
-        this.setState((prevState, props)=>({
-            flag:!prevState.flag
-        }))
+        const { handleFunc,index } = this.props;
+        handleFunc(index);
     }
 
     render(){
-        const { info } = this.props;
+        const { info,openNum,index } = this.props;
         const height = info.itemList.length*1.2+"rem";
+        const flag = openNum===index;
         return(
             <div className = "fold-box" onClick={this.changeState}>
-                <div className={this.state.flag ? "fold-title open" :"fold-title"}>
+                <div className={flag ? "fold-title open" :"fold-title"}>
                     <p className="fold-name">{info.title}</p>
                     <img src={ picPathHead + info.img} alt=""/>
                 </div>
-                <div className= "fold-container" style={{height:this.state.flag ? `${height}`:"0"}}>
+                <div className= "fold-container" style={{height:flag ? `${height}`:"0"}}>
                     {
                         info.itemList.map((item,i)=>{
                             return(

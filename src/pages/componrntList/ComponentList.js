@@ -18,12 +18,14 @@ class ComponentList extends Component{
                 {title:"基础内容",img:"/foldBox/container.png",itemList:[{name:"swiper",path:""}]},
                 {title:"基础内容",img:"/foldBox/container.png",itemList:[{name:"swiper",path:""}]}
             ],
-            openNum:-1
+            openNum:-1,
+
         };
     }
-
-    changePage(){
-
+    changeState(num){
+        this.setState({
+            openNum:num
+        })
     }
 
     render(){
@@ -36,11 +38,11 @@ class ComponentList extends Component{
                       以下将展示ChefUI的组件
                     </p>
                 </div>
-                <div className = "component-container" >
+                <div className = "component-container">
                     {
                         this.state.foldList.map((item,index)=>{
                             return(
-                                <FoldBox info={item} key={`foldBox${index}`}/>
+                                <FoldBox info={item} key={`foldBox${index}`} handleFunc = {this.changeState.bind(this)} openNum ={this.state.openNum} index={index}/>
                             )
                         })
                     }
