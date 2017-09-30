@@ -11,7 +11,7 @@ import "./index.scss"
 class FoldItem extends React.Component{
 
     changePage(path){
-        browserHistory.push({path:path})
+        browserHistory.push({pathname:path})
     }
     render(){
         const { data } = this.props;

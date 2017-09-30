@@ -14,7 +14,7 @@ class ComponentList extends Component{
         super();
         this.state={
             foldList:[
-                {title:"容器组件",img:"/foldBox/container.png",itemList:[{name:"swiper",path:""}]},
+                {title:"容器组件",img:"/foldBox/container.png",itemList:[{name:"swiper",path:"/chefUI/slide"}]},
                 {title:"基础内容",img:"/foldBox/container.png",itemList:[{name:"swiper",path:""}]},
                 {title:"基础内容",img:"/foldBox/container.png",itemList:[{name:"swiper",path:""}]}
             ],
