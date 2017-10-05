@@ -6,9 +6,9 @@ import React from "react"
 import ReactDOM from "react-dom"
 import { Router, Route, Redirect, hashHistory, IndexRoute,browserHistory } from "react-router"
 import App from "./containers/App"
-import ComponentList from "./pages/componrntList/ComponentList"
+import ComponentList from "./pages/componentList/ComponentList"
 
-import Slide from "./components/Slide/Slide"
+import SlidePage from "./pages/slide/SlidePage"
 
 import "./styles/normalized.scss"
 
@@ -17,7 +17,7 @@ ReactDOM.render((
             <Redirect from="/" to="/chefUI" />
             <Route path="/chefUI" component={App}>
                 <IndexRoute component={ComponentList} />
-                <Route path="/chefUI/slide" component={Slide} />
+                <Route path="/chefUI/slide" component={ SlidePage } />
             </Route>
         </Router>
     ), document.getElementById('app'));
